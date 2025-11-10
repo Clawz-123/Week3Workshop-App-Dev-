@@ -1,11 +1,14 @@
-﻿namespace Week3Workshop
+﻿using System.ComponentModel;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace Week3Workshop
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             //Calculator calculator = new Calculator();
-            NullOperations NullOperators = new NullOperations();
+            //NullOperations NullOperators = new NullOperations();
 
 
 
@@ -18,7 +21,7 @@
             //Console.WriteLine("Odd or Even (5): " + calculator.FindOddEven(5));
 
             //calling the method to perform null checks
-            NullOperators.PerformNullChecks();
+            //NullOperators.PerformNullChecks();
 
 
 
@@ -106,15 +109,53 @@
 
 
 
-        //    // Program to find the sum of all elements in an array using a foreach loop.
-        //    int[] numbers = { 1, 2, 3, 4, 5 };
-        //    int totalSum = 0;
-        //    foreach (int num in numbers)
-        //    {
-        //        totalSum += num;
-        //    }
-        //    Console.WriteLine("The sum of all elements in the array is: " + totalSum);
-        //}
+            //    // Program to find the sum of all elements in an array using a foreach loop.
+            //    int[] numbers = { 1, 2, 3, 4, 5 };
+            //    int totalSum = 0;
+            //    foreach (int num in numbers)
+            //    {
+            //        totalSum += num;
+            //    }
+            //    Console.WriteLine("The sum of all elements in the array is: " + totalSum);
+            //}
 
+
+            ////Task 6 : Try Catch Finally
+            ////Write a program that accepts a number from the user and converts it to an integer.
+            //Console.WriteLine("Please enter a number: ");
+            //try
+            //{
+            //    int parsed = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("You entered: " + parsed);
+            //}
+            //catch (FormatException)
+            //{
+            //    Console.WriteLine("Invalid number format");
+            //}
+            //finally
+            //{
+            //    Console.WriteLine("Program Executed");
+            //}
+
+
+            // Program that asks for a password.
+            Console.Write("Please enter a password: ");
+            string password = Console.ReadLine();
+
+            try
+            {
+                if (password == null || password.Length < 6)
+                {
+                    throw new Exception("Password must be at least 6 characters.");
+                }
+
+                Console.WriteLine("Password satisfied the requirement");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
+
