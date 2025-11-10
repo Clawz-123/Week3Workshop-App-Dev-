@@ -20,20 +20,53 @@
 
 
             //// Task 3: If else and Switch 
-            Console.Write("Please, enter your age: ");
-            int age = int.Parse(Console.ReadLine());
+            //Console.Write("Please, enter your age: ");
+            //int age = int.Parse(Console.ReadLine());
+            //
+            //if (age < 13)
+            //{
+            //    Console.WriteLine("Child");
+            //}
+            //else if (age >= 13 && age <= 19)
+            //{
+            //    Console.WriteLine("Teenager");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Adult");
+            //}
 
-            if (age < 13)
+
+            // Task 4: If else and Switch 
+            Console.Write("Please, enter a day number (1-7): ");
+            int dayNumber = int.Parse(Console.ReadLine());
+
+            switch (dayNumber)
             {
-                Console.WriteLine("Child");
-            }
-            else if (age >= 13 && age <= 19)
-            {
-                Console.WriteLine("Teenager");
-            }
-            else
-            {
-                Console.WriteLine("Adult");
+                case 1:
+                    Console.WriteLine("Sunday");
+                    break;
+                case 2:
+                    Console.WriteLine("Monday");
+                    break;
+                case 3:
+                    Console.WriteLine("Tuesday");
+                    break;
+                case 4:
+                    Console.WriteLine("Wednesday");
+                    break;
+                case 5:
+                    Console.WriteLine("Thursday");
+                    break;
+                case 6:
+                    Console.WriteLine("Friday");
+                    break;
+                case 7:
+                    Console.WriteLine("Saturday");
+                    break;
+                default:
+                    Console.WriteLine("Invalid day number");
+                    break;
             }
         }
     }
