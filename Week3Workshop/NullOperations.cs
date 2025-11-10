@@ -8,22 +8,29 @@ namespace Week3Workshop
 {
     internal class NullOperations
     {
+
         public void PerformNullChecks()
         {
-            // Declare username and assign null
-            string? username = null;
 
-            // 1) Ternary operator (? :)
-            Console.WriteLine("Ternary check: " + (username == null ? "Username is not available" : username));
+            //Ternary Operator
+            string userName = null;
 
-            // 2) Null-coalescing operator (??)
-            Console.WriteLine("Null-coalescing check: " + (username ?? "Username is not available"));
+            // Using ternary operator to check for null
+            string result = (userName == null) ? "Username is not available" : userName;
 
-            // 3) Null-coalescing assignment operator (??=)
-            username ??= "GuestUser";
+            // Print the result
+            Console.WriteLine(result);
 
-            // Print the updated value after ??= assignment
-            Console.WriteLine("After ??= assignment: " + username);
+            //Null coalescing operator (??)
+            string result2 = userName ?? "Username is not available";
+            Console.WriteLine(result2);
+
+            //Null-Coalescing Assignment Operator(??=)
+            userName ??= "Pukar Bohara";
+            Console.WriteLine($"UserName: {userName}");
+
+
         }
     }
+
 }
