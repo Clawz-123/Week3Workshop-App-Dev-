@@ -32,10 +32,5 @@ namespace Week3Workshop
             return (double)a / b;
         }
 
-        public string FindOddEven(int number)
-        {
-            return number % 2 == 0 ? "Even" : "Odd";
-        }
-
     }
 }
