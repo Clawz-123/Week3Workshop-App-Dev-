@@ -14,8 +14,27 @@
             //Console.WriteLine("Odd or Even (5): " + calculator.FindOddEven(5));
 
             // Call PerformNullChecks from NullOperations
-            NullOperations nullOps = new NullOperations();
-            nullOps.PerformNullChecks();
+            //NullOperations nullOps = new NullOperations();
+            //nullOps.PerformNullChecks();
+
+
+
+            //// Task 3: If else and Switch 
+            Console.Write("Please, enter your age: ");
+            int age = int.Parse(Console.ReadLine());
+
+            if (age < 13)
+            {
+                Console.WriteLine("Child");
+            }
+            else if (age >= 13 && age <= 19)
+            {
+                Console.WriteLine("Teenager");
+            }
+            else
+            {
+                Console.WriteLine("Adult");
+            }
         }
     }
 
